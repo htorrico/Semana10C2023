@@ -10,18 +10,23 @@
                FontSize="Large"
                HorizontalOptions="Center"
                VerticalOptions="CenterAndExpand"
-               BindingContext="{x:Reference slider1}"
-               Rotation="{Binding Value}"
+               BindingContext="{x:Reference entry1}"
+               Rotation="{Binding Text}"
                
             ></Label>
+        <Entry x:Name="entry1" 
+               
+               />
         <Slider x:Name="slider1"
+                BindingContext="{x:Reference entry1}"
+                Value="{Binding Text}"
                 Maximum="360"
                 VerticalOptions="CenterAndExpand"
                 ></Slider>
-        <Label Text="Prueba"
-               BindingContext="{x:Reference slider1}"
-               FontSize="{Binding Value}"
-               />
+        <!--<Label Text="Prueba"
+               BindingContext="{x:Reference entry1}"
+               FontSize="{Binding Text}"
+               />-->
 
 
     </StackLayout>
